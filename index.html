@@ -23,6 +23,7 @@
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#research" class="nav-link">Projects</a></li>
                 <li><a href="#extracurriculars" class="nav-link">Extracurriculars</a></li>
@@ -58,35 +59,9 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <div class="about-text">
+                <div class="about-text" style="max-width: 800px; margin: 0 auto;">
                     <p>I am a Senior (Class of 2026) passionate about aerospace engineering, with a strong foundation in research, rocketry, and STEM education. My work spans from independent research on airfoil design to high-power rocketry certification, always pushing the boundaries of what's possible in aerospace technology.</p>
                     <p>Through my experiences at Fermilab, the Illinois Aerospace Institute, and various leadership roles, I've developed a comprehensive understanding of aerospace engineering principles and their real-world applications.</p>
-                </div>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Engineering Tools</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Autodesk Fusion 360</span>
-                            <span class="skill-tag">Open Rocket</span>
-                            <span class="skill-tag">Systems Tool Kit (STK)</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Programming</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">HTML</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Software</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Microsoft Office</span>
-                            <span class="skill-tag">Google Workspace</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -96,68 +71,92 @@
     <section id="education" class="section section-alt">
         <div class="container">
             <h2 class="section-title">Education</h2>
-            <div class="education-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Senior, Class of 2026</h3>
-                        <p class="timeline-location">Neuqua Valley High School, Naperville, IL</p>
-                        <div class="timeline-details" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.5rem;">
-                            <div>
-                                <h4>Extracurriculars</h4>
-                                <ul>
-                                    <li>American Rocketry Challenge: Team Captain</li>
-                                    <li>Business Professionals of America: Vice President of Competitive Events</li>
-                                    <li>Mu Alpha Theta: International Math Honor Society</li>
-                                    <li>Club Elevate: President</li>
-                                    <li>JV Tennis: Team Captain</li>
-                                    <li>Model UN</li>
-                                </ul>
-                                <a href="#extracurriculars" class="research-link" style="display: inline-block; margin-top: 1rem;">Learn More →</a>
-                            </div>
-                            <div>
-                                <h4>Relevant Coursework</h4>
-                                <ul>
-                                    <li>AP Computer Science A</li>
-                                    <li>AP Statistics</li>
-                                    <li>Calculus 3</li>
-                                    <li>AP Calculus BC</li>
-                                    <li>AP Physics</li>
-                                    <li>AP Chemistry</li>
-                                    <li>PLTW Capstone</li>
-                                    <li>PLTW Aerospace Engineering</li>
-                                </ul>
-                            </div>
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div style="margin-bottom: 2.5rem;">
+                    <h3 style="color: var(--blue-bright); font-size: 1.5rem; margin-bottom: 0.5rem; font-family: 'Orbitron', sans-serif;">Senior, Class of 2026</h3>
+                    <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 1.5rem;">Neuqua Valley High School, Naperville, IL</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.5rem;">
+                        <div>
+                            <h4 style="color: var(--blue-bright); margin-bottom: 1rem; font-size: 1.2rem;">Extracurriculars</h4>
+                            <ul style="list-style: none; padding-left: 0;">
+                                <li style="color: var(--text-secondary); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">• American Rocketry Challenge: Team Captain</li>
+                                <li style="color: var(--text-secondary); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">• Business Professionals of America: Vice President of Competitive Events</li>
+                                <li style="color: var(--text-secondary); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">• Mu Alpha Theta: International Math Honor Society</li>
+                                <li style="color: var(--text-secondary); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">• Club Elevate: President</li>
+                                <li style="color: var(--text-secondary); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">• JV Tennis: Team Captain</li>
+                                <li style="color: var(--text-secondary); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">• Model UN</li>
+                            </ul>
+                            <a href="#extracurriculars" class="research-link" style="display: inline-block; margin-top: 1rem;">Learn More →</a>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--blue-bright); margin-bottom: 1rem; font-size: 1.2rem;">Relevant Coursework</h4>
+                            <ul style="list-style: none; padding-left: 0;">
+                                <li style="color: var(--text-secondary); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">• AP Computer Science A</li>
+                                <li style="color: var(--text-secondary); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">• AP Statistics</li>
+                                <li style="color: var(--text-secondary); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">• Calculus 3</li>
+                                <li style="color: var(--text-secondary); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">• AP Calculus BC</li>
+                                <li style="color: var(--text-secondary); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">• AP Physics</li>
+                                <li style="color: var(--text-secondary); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">• AP Chemistry</li>
+                                <li style="color: var(--text-secondary); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">• PLTW Capstone</li>
+                                <li style="color: var(--text-secondary); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">• PLTW Aerospace Engineering</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content" style="padding-bottom: 1rem;">
-                        <h3>Illinois Aerospace Institute</h3>
-                        <p class="timeline-location">University of Illinois at Urbana-Champaign</p>
-                        <p class="timeline-duration">One week residential program</p>
-                        <div style="color: var(--text-secondary); margin-top: 1rem; line-height: 1.8;">
-                            <p>Over the week-long on-campus experience, I attended lectures on a variety of aerospace concepts like flight mechanics, rocket propulsion, orbital dynamics, and aerospace materials. The program also involved introductions to industry tools and analyzing how to solve problems using Excel and Python.</p>
-                            <p style="margin-top: 1rem;">I also visited world-class aerospace research facilities on campus, including the LASSI, ARL, and the Wind Tunnel Laboratory. I witnessed how aerospace industry research is done using industry-grade tools, testing equipment, and design processes. I also spoke with researchers working on active projects and discussed their experiences to give me a clear picture of what aerospace engineering looks like in practice.</p>
-                            <p style="margin-top: 1rem;">The program also included model glider and rocket design activities, where I applied key engineering concepts like lift, stability, and thrust. I worked through the full design process—planning, building, testing, and making adjustments based on performance results. These hands-on projects helped reinforce what I learned in lectures and provided a deeper understanding of how aerospace engineers approach challenges.</p>
-                        </div>
-                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem; margin-bottom: 0;">
-                            <img src="images/UIUC-1.JPG" alt="Illinois Aerospace Institute" style="width: 100%; height: 50%; object-fit: cover; border-radius: 5px; border: 1px solid var(--border-color);">
-                            <img src="images/UIUC-2.JPG" alt="Illinois Aerospace Institute" style="width: 100%; height: 50%; object-fit: contain; border-radius: 5px; border: 1px solid var(--border-color);">
-                        </div>
+                <div style="margin-bottom: 2.5rem;">
+                    <h3 style="color: var(--blue-bright); font-size: 1.5rem; margin-bottom: 0.5rem; font-family: 'Orbitron', sans-serif;">Illinois Aerospace Institute</h3>
+                    <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 0.5rem;">University of Illinois at Urbana-Champaign</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">One week residential program</p>
+                    <div style="color: var(--text-secondary); margin-top: 1rem; line-height: 1.8;">
+                        <p>Over the week-long on-campus experience, I attended lectures on a variety of aerospace concepts like flight mechanics, rocket propulsion, orbital dynamics, and aerospace materials. The program also involved introductions to industry tools and analyzing how to solve problems using Excel and Python.</p>
+                        <p style="margin-top: 1rem;">I also visited world-class aerospace research facilities on campus, including the LASSI, ARL, and the Wind Tunnel Laboratory. I witnessed how aerospace industry research is done using industry-grade tools, testing equipment, and design processes. I also spoke with researchers working on active projects and discussed their experiences to give me a clear picture of what aerospace engineering looks like in practice.</p>
+                        <p style="margin-top: 1rem;">The program also included model glider and rocket design activities, where I applied key engineering concepts like lift, stability, and thrust. I worked through the full design process—planning, building, testing, and making adjustments based on performance results. These hands-on projects helped reinforce what I learned in lectures and provided a deeper understanding of how aerospace engineers approach challenges.</p>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem;">
+                        <img src="images/UIUC-1.JPG" alt="Illinois Aerospace Institute" style="width: 100%; height: 50%; object-fit: cover; border-radius: 5px; border: 1px solid var(--border-color);">
+                        <img src="images/UIUC-2.JPG" alt="Illinois Aerospace Institute" style="width: 100%; height: 50%; object-fit: contain; border-radius: 5px; border: 1px solid var(--border-color);">
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Saturday Morning Physics</h3>
-                        <p class="timeline-location">Fermi National Laboratory (Fermilab)</p>
-                        <p class="timeline-duration">11-week program</p>
-                        <p style="color: var(--text-secondary); margin-top: 1rem; line-height: 1.8;">I participated in Fermilab's prestigious Saturday Morning Physics (SMP) Program, an enrichment series designed to introduce high school students to modern physics. Over the course of 11 weeks, I attended expert-led lectures and toured one of the world's leading physics laboratories. Through engaging presentations and access to Fermilab's facilities, I explored cutting-edge physics concepts and gained a deeper understanding and appreciation of how modern physics research is conducted.</p>
-                        <div style="margin-top: 1.5rem;">
-                            <img src="images/Fermi-1.jpg" alt="Fermilab" style="width: 100%; max-width: 500px; border-radius: 5px; border: 1px solid var(--border-color);">
-                        </div>
+                <div style="margin-bottom: 2.5rem;">
+                    <h3 style="color: var(--blue-bright); font-size: 1.5rem; margin-bottom: 0.5rem; font-family: 'Orbitron', sans-serif;">Saturday Morning Physics</h3>
+                    <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 0.5rem;">Fermi National Laboratory (Fermilab)</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">11-week program</p>
+                    <p style="color: var(--text-secondary); margin-top: 1rem; line-height: 1.8;">I participated in Fermilab's prestigious Saturday Morning Physics (SMP) Program, an enrichment series designed to introduce high school students to modern physics. Over the course of 11 weeks, I attended expert-led lectures and toured one of the world's leading physics laboratories. Through engaging presentations and access to Fermilab's facilities, I explored cutting-edge physics concepts and gained a deeper understanding and appreciation of how modern physics research is conducted.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <img src="images/Fermi-1.jpg" alt="Fermilab" style="width: 100%; max-width: 500px; border-radius: 5px; border: 1px solid var(--border-color);">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid" style="max-width: 900px; margin: 0 auto;">
+                <div class="skill-category">
+                    <h3>Engineering Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Autodesk Fusion 360</span>
+                        <span class="skill-tag">Open Rocket</span>
+                        <span class="skill-tag">Systems Tool Kit (STK)</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Software</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Microsoft Office</span>
+                        <span class="skill-tag">Google Workspace</span>
                     </div>
                 </div>
             </div>

@@ -944,6 +944,11 @@ body {
         grid-template-columns: 1fr !important;
     }
 
+    /* Stack education two-column layout on mobile */
+    div[style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+    }
+
     /* Make images responsive */
     img {
         max-width: 100% !important;
