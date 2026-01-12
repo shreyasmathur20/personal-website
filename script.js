@@ -143,61 +143,81 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
-// Mobile menu toggle (if needed for responsive design)
+// Mobile menu toggle
 const createMobileMenu = () => {
     const navMenu = document.querySelector('.nav-menu');
     const navContainer = document.querySelector('.nav-container');
     
-    // Create mobile menu button
-    const menuButton = document.createElement('button');
-    menuButton.className = 'mobile-menu-toggle';
-    menuButton.innerHTML = '☰';
-    menuButton.style.display = 'none';
-    menuButton.style.background = 'transparent';
-    menuButton.style.border = 'none';
-    menuButton.style.color = 'var(--blue-bright)';
-    menuButton.style.fontSize = '1.5rem';
-    menuButton.style.cursor = 'pointer';
+    if (!navMenu || !navContainer) return;
     
-    navContainer.insertBefore(menuButton, navMenu);
+    // Check if button already exists
+    let menuButton = document.querySelector('.mobile-menu-toggle');
+    if (!menuButton) {
+        menuButton = document.createElement('button');
+        menuButton.className = 'mobile-menu-toggle';
+        menuButton.setAttribute('aria-label', 'Toggle menu');
+        menuButton.innerHTML = '☰';
+        navContainer.appendChild(menuButton);
+    }
     
-    menuButton.addEventListener('click', () => {
+    // Toggle menu function
+    const toggleMenu = (e) => {
+        e.stopPropagation();
         navMenu.classList.toggle('active');
-    });
-
+        const isActive = navMenu.classList.contains('active');
+        menuButton.innerHTML = isActive ? '✕' : '☰';
+    };
+    
+    // Remove existing listeners and add new one
+    const newButton = menuButton.cloneNode(true);
+    menuButton.parentNode.replaceChild(newButton, menuButton);
+    newButton.addEventListener('click', toggleMenu);
+    
     // Close mobile menu when a link is clicked
     const navLinks = navMenu.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (window.innerWidth <= 768) {
                 navMenu.classList.remove('active');
+                newButton.innerHTML = '☰';
             }
         });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768 && 
+            navMenu.classList.contains('active') &&
+            !navContainer.contains(e.target)) {
+            navMenu.classList.remove('active');
+            newButton.innerHTML = '☰';
+        }
     });
     
     // Show/hide mobile menu button based on screen size
     const checkScreenSize = () => {
         if (window.innerWidth <= 768) {
-            menuButton.style.display = 'block';
-            navMenu.style.display = navMenu.classList.contains('active') ? 'flex' : 'none';
-            navMenu.style.flexDirection = 'column';
-            navMenu.style.position = 'absolute';
-            navMenu.style.top = '100%';
-            navMenu.style.left = '0';
-            navMenu.style.width = '100%';
-            navMenu.style.background = 'rgba(10, 21, 32, 0.98)';
-            navMenu.style.padding = '1rem';
+            newButton.style.display = 'block';
+            if (!navMenu.classList.contains('active')) {
+                navMenu.style.display = 'none';
+            }
         } else {
-            menuButton.style.display = 'none';
+            newButton.style.display = 'none';
             navMenu.style.display = 'flex';
-            navMenu.style.flexDirection = 'row';
-            navMenu.style.position = 'static';
-            navMenu.style.background = 'transparent';
+            navMenu.classList.remove('active');
+            newButton.innerHTML = '☰';
         }
     };
     
-    window.addEventListener('resize', checkScreenSize);
+    // Initial check
     checkScreenSize();
+    
+    // Debounce resize event
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(checkScreenSize, 250);
+    });
 };
 
 // Initialize mobile menu
