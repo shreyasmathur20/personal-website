@@ -164,6 +164,16 @@ const createMobileMenu = () => {
     menuButton.addEventListener('click', () => {
         navMenu.classList.toggle('active');
     });
+
+    // Close mobile menu when a link is clicked
+    const navLinks = navMenu.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                navMenu.classList.remove('active');
+            }
+        });
+    });
     
     // Show/hide mobile menu button based on screen size
     const checkScreenSize = () => {
