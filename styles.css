@@ -434,7 +434,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('images/neuquabackground.jpg');
+    background-image: url('images/neuquabackground.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -446,6 +446,51 @@ body {
 .neuqua-valley-content > * {
     position: relative;
     z-index: 1;
+}
+
+.uiuc-content {
+    position: relative;
+    overflow: hidden;
+    padding: 1rem !important;
+}
+
+.uiuc-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/uiucbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.uiuc-content > * {
+    position: relative;
+    z-index: 1;
+}
+
+.uiuc-content .timeline-details,
+.uiuc-content div[style*="color: var(--text-secondary)"] {
+    margin-top: 0.5rem;
+}
+
+.uiuc-content div[style*="display: grid"][style*="grid-template-columns: repeat(2"] {
+    margin-top: 1rem !important;
+    margin-bottom: 0 !important;
+}
+
+.uiuc-content p {
+    margin-bottom: 0.75rem;
+}
+
+.uiuc-content p[style*="margin-top: 1rem"] {
+    margin-top: 0.75rem !important;
 }
 
 .timeline-content:hover {
