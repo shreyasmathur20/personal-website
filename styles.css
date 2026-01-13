@@ -419,6 +419,33 @@ body {
     border-radius: 10px;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
+    position: relative;
+}
+
+.neuqua-valley-content {
+    position: relative;
+    overflow: hidden;
+}
+
+.neuqua-valley-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/neuquabackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.neuqua-valley-content > * {
+    position: relative;
+    z-index: 1;
 }
 
 .timeline-content:hover {
