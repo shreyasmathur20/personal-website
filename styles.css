@@ -493,6 +493,41 @@ body {
     margin-top: 0.75rem !important;
 }
 
+.fermilab-content {
+    position: relative;
+    overflow: hidden;
+    padding: 1rem !important;
+}
+
+.fermilab-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/fermibackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.fermilab-content > * {
+    position: relative;
+    z-index: 1;
+}
+
+.fermilab-content p {
+    margin-bottom: 0.75rem;
+}
+
+.fermilab-content div[style*="margin-top: 1.5rem"] {
+    margin-top: 1rem !important;
+}
+
 .timeline-content:hover {
     background: var(--card-hover);
     border-color: var(--blue-accent);
