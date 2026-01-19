@@ -141,8 +141,23 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, var(--dark-blue-1) 0%, var(--dark-blue-2) 50%, var(--dark-blue-3) 100%);
+    background-image: url('images/homebackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     z-index: -1;
+}
+
+.hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, var(--dark-blue-1) 0%, var(--dark-blue-2) 50%, var(--dark-blue-3) 100%);
+    opacity: 0.85;
+    z-index: 1;
 }
 
 .stars {
@@ -188,7 +203,8 @@ body {
     font-family: 'Orbitron', sans-serif;
     font-size: 4rem;
     font-weight: 900;
-    color: var(--blue-bright);
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(61, 90, 122, 0.8), 0 0 40px rgba(61, 90, 122, 0.6), 0 0 60px rgba(61, 90, 122, 0.4);
     margin-bottom: 0.5rem;
     animation: fadeInUp 1s ease;
 }
@@ -196,7 +212,8 @@ body {
 .title-subtitle {
     display: block;
     font-size: 1.5rem;
-    color: var(--text-secondary);
+    color: #e0f0ff;
+    text-shadow: 0 0 10px rgba(61, 90, 122, 0.6), 0 0 20px rgba(61, 90, 122, 0.4);
     font-weight: 300;
     letter-spacing: 3px;
     animation: fadeInUp 1s ease 0.2s backwards;
@@ -240,14 +257,17 @@ body {
 }
 
 .btn-secondary {
-    background: transparent;
-    color: var(--blue-bright);
-    border: 2px solid var(--blue-accent);
+    background: rgba(61, 90, 122, 0.3);
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    text-shadow: 0 0 10px rgba(61, 90, 122, 0.8);
+    box-shadow: 0 0 20px rgba(61, 90, 122, 0.5);
 }
 
 .btn-secondary:hover {
-    background: rgba(58, 90, 122, 0.2);
-    border-color: var(--blue-bright);
+    background: rgba(61, 90, 122, 0.5);
+    border-color: #ffffff;
+    box-shadow: 0 0 30px rgba(61, 90, 122, 0.8);
     transform: translateY(-2px);
 }
 
@@ -346,56 +366,6 @@ body {
     z-index: 1;
 }
 
-.experience-section {
-    position: relative;
-    overflow: hidden;
-}
-
-.experience-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('images/experiencebackground.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.2;
-    z-index: 0;
-}
-
-.experience-section .container {
-    position: relative;
-    z-index: 1;
-}
-
-.awards-section {
-    position: relative;
-    overflow: hidden;
-}
-
-.awards-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('images/awardbackground.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.2;
-    z-index: 0;
-}
-
-.awards-section .container {
-    position: relative;
-    z-index: 1;
-}
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -406,7 +376,8 @@ body {
     font-family: 'Orbitron', sans-serif;
     font-size: 3rem;
     font-weight: 700;
-    color: var(--blue-bright);
+    color: #6bb6ff;
+    text-shadow: 0 0 15px rgba(107, 182, 255, 0.6), 0 0 30px rgba(107, 182, 255, 0.3);
     text-align: center;
     margin-bottom: 2rem;
     position: relative;
@@ -421,7 +392,8 @@ body {
     transform: translateX(-50%);
     width: 100px;
     height: 3px;
-    background: var(--blue-bright);
+    background: #6bb6ff;
+    box-shadow: 0 0 10px rgba(107, 182, 255, 0.6);
 }
 
 /* ============================================
@@ -449,7 +421,8 @@ body {
 }
 
 .skill-category h3 {
-    color: var(--blue-bright);
+    color: #6bb6ff;
+    text-shadow: 0 0 10px rgba(107, 182, 255, 0.5);
     font-size: 1.3rem;
     margin-bottom: 1rem;
     font-family: 'Orbitron', sans-serif;
@@ -637,7 +610,8 @@ body {
 }
 
 .timeline-content h3 {
-    color: var(--blue-bright);
+    color: #6bb6ff;
+    text-shadow: 0 0 10px rgba(107, 182, 255, 0.5);
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     font-family: 'Orbitron', sans-serif;
@@ -659,7 +633,8 @@ body {
 }
 
 .timeline-details h4 {
-    color: var(--blue-bright);
+    color: #6bb6ff;
+    text-shadow: 0 0 8px rgba(107, 182, 255, 0.4);
     margin-bottom: 1rem;
     font-size: 1.2rem;
 }
@@ -685,6 +660,31 @@ body {
 /* ============================================
    EXPERIENCE CARDS
    ============================================ */
+
+.experience-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/experiencebackground.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.experience-section .container {
+    position: relative;
+    z-index: 1;
+}
 
 .experience-grid {
     display: grid;
@@ -714,7 +714,8 @@ body {
 }
 
 .card-header h3 {
-    color: var(--blue-bright);
+    color: #6bb6ff;
+    text-shadow: 0 0 10px rgba(107, 182, 255, 0.5);
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     font-family: 'Orbitron', sans-serif;
@@ -798,7 +799,8 @@ body {
 }
 
 .research-card h3 {
-    color: var(--blue-bright);
+    color: #6bb6ff;
+    text-shadow: 0 0 10px rgba(107, 182, 255, 0.5);
     font-size: 1.5rem;
     margin-bottom: 1rem;
     font-family: 'Orbitron', sans-serif;
@@ -834,6 +836,31 @@ body {
    AWARDS
    ============================================ */
 
+.awards-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.awards-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/awardbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.awards-section .container {
+    position: relative;
+    z-index: 1;
+}
+
 .awards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -855,7 +882,8 @@ body {
 }
 
 .award-category h3 {
-    color: var(--blue-bright);
+    color: #6bb6ff;
+    text-shadow: 0 0 10px rgba(107, 182, 255, 0.5);
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     font-family: 'Orbitron', sans-serif;
@@ -872,7 +900,8 @@ body {
 }
 
 .award-name {
-    color: var(--blue-bright);
+    color: #6bb6ff;
+    text-shadow: 0 0 8px rgba(107, 182, 255, 0.4);
     font-weight: 700;
 }
 
@@ -902,7 +931,8 @@ body {
 }
 
 .volunteer-card h3 {
-    color: var(--blue-bright);
+    color: #6bb6ff;
+    text-shadow: 0 0 10px rgba(107, 182, 255, 0.5);
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     font-family: 'Orbitron', sans-serif;
@@ -923,6 +953,31 @@ body {
 /* ============================================
    EXTRACURRICULARS
    ============================================ */
+
+.extracurriculars-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.extracurriculars-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/extrabackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.extracurriculars-section .container {
+    position: relative;
+    z-index: 1;
+}
 
 .extracurriculars-grid {
     display: grid;
@@ -953,7 +1008,8 @@ body {
 }
 
 .extracurricular-item h3 {
-    color: var(--blue-bright);
+    color: #6bb6ff;
+    text-shadow: 0 0 10px rgba(107, 182, 255, 0.5);
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
     font-family: 'Orbitron', sans-serif;
@@ -966,6 +1022,31 @@ body {
 /* ============================================
    CONTACT
    ============================================ */
+
+.contact-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/intouchbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.contact-section .container {
+    position: relative;
+    z-index: 1;
+}
 
 .contact-content {
     text-align: center;
