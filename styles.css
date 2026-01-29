@@ -437,6 +437,20 @@ body {
     z-index: 1;
 }
 
+.about-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-photo img {
+    max-width: 260px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+}
+
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
