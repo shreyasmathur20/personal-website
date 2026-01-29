@@ -1294,6 +1294,7 @@ body {
         height: auto !important;
         display: block;
         margin: 0 auto;
+        object-fit: contain !important;
     }
 
     /* Remove height constraints on mobile */
@@ -1342,6 +1343,23 @@ body {
 
     .research-card {
         padding: 1.5rem !important;
+        overflow: hidden !important;
+    }
+
+    /* Fix image containers in research cards */
+    .research-card > div[style*="display: grid"] {
+        overflow: hidden !important;
+        width: 100% !important;
+    }
+
+    /* Ensure images don't overflow their containers */
+    .research-card img {
+        max-width: 100% !important;
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+        display: block !important;
+        margin: 0 auto !important;
     }
 
     .research-card h3 {
@@ -1428,12 +1446,24 @@ body {
 
     /* Adjust image heights on very small screens */
     img[style*="height: 300px"] {
-        height: 200px !important;
-        min-height: 200px !important;
+        height: auto !important;
+        min-height: auto !important;
+        max-height: 250px !important;
+        object-fit: contain !important;
     }
 
     img[style*="min-height: 300px"] {
-        min-height: 200px !important;
+        min-height: auto !important;
+        max-height: 250px !important;
+        object-fit: contain !important;
+    }
+
+    /* Fix rotated images on mobile */
+    img[style*="transform: rotate"] {
+        max-width: 150px !important;
+        width: auto !important;
+        height: auto !important;
+        margin: 0.5rem auto !important;
     }
 
     .experience-card,
