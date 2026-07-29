@@ -759,9 +759,18 @@ body {
 }
 
 .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--border-color);
+}
+
+.card-header-main {
+    flex: 1;
+    min-width: 0;
 }
 
 .card-header h3 {
@@ -783,6 +792,10 @@ body {
     display: block;
     color: var(--text-muted);
     font-size: 0.9rem;
+    text-align: right;
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding-top: 0.25rem;
 }
 
 .card-list {
@@ -1490,6 +1503,16 @@ body {
 
     .card-header h3 {
         font-size: 1.2rem;
+    }
+
+    .card-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .card-date {
+        text-align: left;
+        padding-top: 0;
     }
 
     .timeline-content {
