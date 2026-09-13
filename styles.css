@@ -618,15 +618,9 @@ body.page-leave {
     z-index: 3;
 }
 
-.purdue-program {
-    color: #ffffff !important;
-    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.85);
-}
-
-.purdue-content .timeline-details h4,
-.purdue-content .timeline-details li {
-    color: #ffffff !important;
-    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.85);
+.purdue-content > h4 {
+    color: #6bb6ff;
+    text-shadow: 0 0 8px rgba(107, 182, 255, 0.4);
 }
 
 .neuqua-valley-content {
@@ -778,7 +772,8 @@ body.page-leave {
 }
 
 .timeline-details li {
-    color: var(--text-secondary);
+    color: #d8e0e8;
+    text-shadow: none;
     margin-bottom: 0.5rem;
     position: relative;
 }
