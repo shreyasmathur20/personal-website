@@ -35,6 +35,45 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    animation: page-enter 0.45s ease both;
+}
+
+body.page-leave {
+    animation: page-exit 0.35s ease both;
+    pointer-events: none;
+}
+
+@keyframes page-enter {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes page-exit {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    body,
+    body.page-leave {
+        animation: none;
+    }
 }
 
 /* ============================================
@@ -312,6 +351,12 @@ body {
     position: relative;
 }
 
+.standalone-section {
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+    min-height: calc(100vh + 8rem);
+}
+
 .section-alt {
     background: var(--dark-blue-2);
 }
@@ -545,6 +590,32 @@ body {
     transition: all 0.3s ease;
     position: relative;
     z-index: 1;
+}
+
+.purdue-content {
+    position: relative;
+    overflow: hidden;
+}
+
+.purdue-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/purduebackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.purdue-content > * {
+    position: relative;
+    z-index: 3;
 }
 
 .neuqua-valley-content {
@@ -852,12 +923,6 @@ body {
     gap: 2rem;
 }
 
-.research-card:nth-child(3) {
-    grid-column: 1 / 3;
-    max-width: 600px;
-    justify-self: center;
-}
-
 .research-card {
     background: var(--card-bg);
     padding: 1.5rem;
@@ -927,6 +992,27 @@ body {
     color: #8cc8ff;
     text-shadow: 0 0 15px rgba(140, 200, 255, 0.8);
     transform: translateX(5px);
+}
+
+.see-all-link {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.45rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 0.85rem 1.5rem;
+}
+
+.project-story .research-card {
+    margin-bottom: 2rem;
+}
+
+.project-story .research-card p {
+    margin-bottom: 1rem;
+}
+
+.project-story .research-card .research-link {
+    display: inline-block;
+    margin-top: 0.25rem;
 }
 
 /* ============================================

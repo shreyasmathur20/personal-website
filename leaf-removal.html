@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf Removal System - Shreyas Mathur</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="logo-text">SM</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="experience.html" class="nav-link">Experience</a></li>
+                <li><a href="research.html" class="nav-link">Projects</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section research-section standalone-section">
+        <div class="container project-story">
+            <h2 class="section-title">Engineering Design and Leaf Removal System</h2>
+            <p class="research-publication" style="text-align: center; margin-bottom: 2rem;">PLTW Capstone Project</p>
+
+            <div class="research-card">
+                <h3>The Project</h3>
+                <p>This was my PLTW engineering capstone with Tanish Lakshmanan and Seth Jones. We spent the year on a problem most people treat as a chore instead of an engineering question: seasonal leaf cleanup. Raking, bagging, and hauling leaves still means hours of bending, twisting, and lifting, and skipping the job lets leaves smother grass. We wanted a collector that would cut that time and strain without turning into a loud, expensive machine nobody would actually use.</p>
+                <p>The design we built toward is a Lawn Sweeper: a manual push tool with wheels that drive a rotating intake, sweeping leaves into a bag on the back. Early requirements leaned toward a fully autonomous machine, but budget, build time, and stakeholder preference pushed us to a mechanical prototype we could actually print, assemble, and test. What follows is that path in order, from proving the problem was real to a half-scale 3D-printed sweeper and the data it produced.</p>
+            </div>
+
+            <div class="research-card">
+                <h3>The Problem</h3>
+                <p>Leaf removal looks ordinary until you look at what it does to people and to a yard. Homeowners are expected to clear leaves every fall, often because an HOA or city ordinance requires it, and the usual method is still a rake, bags, and a lot of full-body work. Done badly, that work shows up as neck, shoulder, and back pain. Left undone, leaves pile up, block sunlight, and kill grass. The problem we wrote down was not “leaves exist.” It was that cleanup is still slow, repetitive, and physically costly, and neglecting it damages the lawn.</p>
+                <p>This report is the justification for taking that problem seriously. It uses injury and raking-safety research, numbers on how many tons of leaves cities actually collect, and a survey of 127 people about how long they spend on the job. A large share of respondents said a single session takes more than an hour, and a quarter said three hours or more. That evidence is what kept the rest of the project aimed at time and strain instead of at building a yard gadget because it looked cool.</p>
+                <a href="reports/problem-and-justification.pdf" class="research-link" target="_blank" rel="noopener">Problem and justification report →</a>
+            </div>
+
+            <div class="research-card">
+                <h3>What People Use Now</h3>
+                <p>Before we sketched anything, we had to know what already exists. People already have rakes, blowers, vacuums, tarps, and a growing set of robotic or patented yard machines. Some of those tools move leaves quickly. Others are quieter or cheaper. Almost all of them still leave a gap: either the user is bent over bagging, the machine is loud and expensive, or the “solution” is a full robot that maps a yard and costs far more than a homeowner wants to spend on fall cleanup.</p>
+                <p>This report walks through commercial products and patents, including ideas like self-gardening robots, and marks what each one does well and where it still fails the user we cared about. The point was not to insult existing tools. It was to avoid rebuilding a leaf blower under a new name. If a push-style collector was going to be worth building, it had to occupy a real opening: collect leaves into its own storage, cut lifting, and stay cheap enough that someone would actually buy or use it.</p>
+                <a href="reports/prior-solutions.pdf" class="research-link" target="_blank" rel="noopener">Prior solutions report →</a>
+            </div>
+
+            <div class="research-card">
+                <h3>Design Requirements</h3>
+                <p>Once the problem and the market gap were clear, we needed a scoreboard. “Make leaf removal easier” is not a requirement. Clearing a 2,500 square foot lawn in about an hour, putting leaves into onboard storage instead of making the user lift bag after bag, holding around 30 gallons, staying under a $550 sale price, keeping noise down, and not asking the user to lift more than about 20 pounds are. Those targets came from stakeholders: homeowners, older people who cannot safely rake for hours, landscaping crews, and HOAs that still expect yards to be clear.</p>
+                <p>The first version of the requirements also included full autonomy, long battery life, and a swappable pack, because an unmanned machine would have been the cleanest way to remove strain. We still wrote those specs down, with reasons, so later decisions had something to argue against. This report is that list: efficiency, disposal, storage, cost, ergonomics, durability, weather, and safety. Every concept after this had to answer it, and every test after that had to be scored against it instead of against whatever looked impressive in a photo.</p>
+                <a href="reports/design-requirements.pdf" class="research-link" target="_blank" rel="noopener">Design requirements report →</a>
+            </div>
+
+            <div class="research-card">
+                <h3>Possible Solutions and the Chosen Design</h3>
+                <p>The idea stage started wide on purpose. Each of us sketched fifteen approaches, forty-five in total, for moving, lifting, or containing leaves. We cut that list to six concepts that were actually different from what is already on the market and that could still hit the main requirements: time, onboard disposal, cost, and storage. Those six went into a decision matrix. The top three then went to stakeholders in a survey so the final pick was not just our favorite sketch.</p>
+                <p>The Lawn Sweeper is the design that survived that process. It is a push collector: the user walks, the wheels turn an axle, and claws or tines sweep leaves into a bag. Other finalists, including more aggressive “gulper” style collectors, lost on cost, buildability, or how people said they would actually use the tool. This report is the paper trail for that choice. It is why we committed to a rotating intake and bag instead of staying in brainstorming, and why the later prototype is a sweeper rather than a robot.</p>
+                <a href="reports/concepts-and-selection.pdf" class="research-link" target="_blank" rel="noopener">Concepts and selection report →</a>
+            </div>
+
+            <div class="research-card">
+                <h3>How the Design Works, and Whether It Was Worth Building</h3>
+                <p>After the Lawn Sweeper was selected, we still had to prove it was physics, not a cartoon. The mechanical idea is a wheel and axle. Push force on the handle becomes rotation at the wheels, torque through the axle, and a spinning intake at the ground. The loads are mostly the user’s push, the torque in the drivetrain, and a fairly light leaf load in the bag. We treated that as real engineering: estimate torque, think about bearings and belts, and ask whether PLA and a half-scale print could still demonstrate the motion even if they could not survive eight seasons in a real yard.</p>
+                <p>Viability was the other half of the same report. A fully autonomous sweeper would have blown the budget and the calendar, and when we asked people which prototype they preferred, more than half of 67 respondents picked the mechanical sweeper over an autonomous one. That is why the school build is a push tool instead of a robot, and why a half-scale 3D-printed model was a legitimate way to test collection instead of a cop-out. If the STEM and the market both failed here, there would have been no reason to cut parts.</p>
+                <a href="reports/stem-and-viability.pdf" class="research-link" target="_blank" rel="noopener">STEM and viability report →</a>
+            </div>
+
+            <div class="research-card">
+                <h3>The Prototype</h3>
+                <p>This is the build. The Lawn Sweeper was modeled in CAD, then printed in PLA as a half-scale machine because a full-size print would have been too large for what we could fabricate and assemble. The custom pieces included the body, hood, intake wheel, claws, handle, and frame. Bought hardware filled in the rest: stainless axles, flanged bearings, a GT2 belt and pulley, and the other goBILDA parts on the bill of materials. After leftover inventory and shipping, the estimated cost to get a testable sweeper in our hands was about $93.</p>
+                <p>Assembly followed a clear order: print and sand, mount bearings in the hood, put the intake and claws on the axle, run that axle through the body and wheels, then add the handle and bag path. This is the moment the rotating intake stopped being a drawing. It is also where the limits of a school prototype show up. PLA is not a production material, half-scale changes how the intake meets the ground, and a printed handle is not a steel one. The report is honest about that. The prototype only had to be honest enough to test, not pretty enough to sell.</p>
+                <a href="reports/prototype-construction.pdf" class="research-link" target="_blank" rel="noopener">Prototype construction report →</a>
+            </div>
+
+            <div class="research-card">
+                <h3>The Test Plan</h3>
+                <p>Before anyone pushed the sweeper through a pile of leaves, we wrote down how it would be judged. The original requirement list was long, including autonomy and battery specs that no longer matched a manual prototype, so this plan re-ranks what we would actually measure. Efficiency still mattered: could the machine clear on the order of a 2,500 square foot lawn in an hour, at least in spirit, by tracking volume collected over time. So did onboard storage, how much the user had to fight the handle, and whether wet leaves, dry leaves, and debris behaved differently.</p>
+                <p>The plan names what data to take, whether it is quantitative or qualitative, and what would count as a pass. Collection rate in gallons per hour, comfort scores, and percent of leaves picked up under different conditions are the core. Setting those rules first is the whole point. If we had invented the scoring after a good or bad run, we could have talked ourselves into whatever story we wanted. This report is the procedure that made later results something we had to live with.</p>
+                <a href="reports/test-plan.pdf" class="research-link" target="_blank" rel="noopener">Test plan report →</a>
+            </div>
+
+            <div class="research-card">
+                <h3>Test Results</h3>
+                <p>Testing started with the mechanism itself. The wheels drove the intake as intended. The claws could lift some leaves and shove others aside, which already said the intake geometry was only partly right. On timed efficiency runs we collected on the order of 4.5 to 5.3 gallons in ten minutes, or about 27 to 32 gallons per hour, with results that were consistent enough to trust the procedure. That is useful, but it is not a finished product clearing a suburban lawn in an hour.</p>
+                <p>Ergonomics and durability were harder on the print. Users found the motion mostly obvious, but the short handle, wheels rubbing the hood, an axle that could drag the ground, and a handle that came out once all showed up in the notes. PLA kept failing in the same places even after reprints. In mixed conditions, dry paper leaves were collected at about 56 percent, wet leaves dropped to 32 percent because they stuck to the intake or slid off, and bulkier debris was actually easier to grab, at about 76 percent. The write-up ends with what a next version should change: stronger material, more clearance so parts stop jamming, and adjustable handle height so taller and shorter people are not stuck with one printed grip. This is the proof for the whole project, including the parts that did not work.</p>
+                <a href="reports/test-results.pdf" class="research-link" target="_blank" rel="noopener">Test results report →</a>
+            </div>
+
+            <div class="research-card">
+                <h3>Project Proposal</h3>
+                <p>The proposal is the early pitch, before the decision matrix and before anyone ordered axles. It puts the leaf-removal problem, the strain and time cost, the gap in current tools, and the first plan for a better collector in one place and asks for the green light to keep going. This is the cheap checkpoint. If the need is not convincing here, a 3D-printed sweeper will not save the project later.</p>
+                <p>Reading it next to the later reports also shows how the project moved. Autonomy and a full product spec were still on the table. The Lawn Sweeper as a half-scale PLA prototype was not yet locked. The slides are the argument we made at the start, not the story we told after testing.</p>
+                <a href="reports/project-proposal.pptx" class="research-link" target="_blank" rel="noopener">Project proposal →</a>
+            </div>
+
+            <div class="research-card">
+                <h3>Preliminary Design Review</h3>
+                <p>The Preliminary Design Review is the first time the chosen Lawn Sweeper had to survive other people in the room. By then we had a concept, requirements, and a mechanical story: push, wheel, axle, intake, bag. The review is supposed to show how the system works, why it was picked over the other concepts, and what the first prototype was actually meant to prove before we spent print time and hardware money.</p>
+                <p>That timing matters. Once PLA parts and goBILDA axles are in the build, changing direction is expensive. This presentation is the checkpoint that was supposed to catch weak assumptions while they were still cheap: scale, materials, intake geometry, and whether a manual sweeper could still honor the original goal of reducing strain.</p>
+                <a href="reports/preliminary-design-review.pptx" class="research-link" target="_blank" rel="noopener">Preliminary design review →</a>
+            </div>
+
+            <div class="research-card">
+                <h3>Final Presentation</h3>
+                <p>The final presentation is the public version of the whole year. It has to stand alone for people who were not in the shop: the problem with raking and bagging, why existing tools were not enough, why we chose a push sweeper instead of a robot, how the half-scale prototype was built, what the tests actually measured, and what failed.</p>
+                <p>That last part is the point. Collection rate, wet-leaf performance, and PLA breaking are part of the story, not footnotes. The slides are where the Lawn Sweeper has to make sense as engineering, including the next-generation changes, instead of as a pile of printed parts and a deadline.</p>
+                <a href="reports/final-presentation.pptx" class="research-link" target="_blank" rel="noopener">Final presentation →</a>
+            </div>
+
+            <p style="text-align: center; margin-top: 2.5rem;">
+                <a href="research.html" class="research-link">← Back to Projects</a>
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Shreyas Mathur. All rights reserved.</p>
+            <p class="footer-subtitle">Aerospace Engineering Portfolio</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
