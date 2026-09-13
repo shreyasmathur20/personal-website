@@ -618,6 +618,11 @@ body.page-leave {
     z-index: 3;
 }
 
+.purdue-program {
+    color: #ffffff !important;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.85);
+}
+
 .neuqua-valley-content {
     position: relative;
     overflow: hidden;
